@@ -1,0 +1,27 @@
+{
+  "name": "entorno-servidor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch typescript/nuevo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3r4yn/Desarrolloentorno-servidor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/3r4yn/Desarrolloentorno-servidor/issues"
+  },
+  "homepage": "https://github.com/3r4yn/Desarrolloentorno-servidor#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
