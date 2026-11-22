@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD DE PRODUCTOS</title>
+    <link href="web/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+    <div id="header">
+       <h1>GESTIÓN DE PRODUCTOS versión 1.1 + BD (PDO)</h1>
+    </div>
+
+    <div id="content">
+        <form method="POST">
+            <table>
+                <tr>
+                    <td><label for="codigo">Codigo</label></td>
+                    <td>
+                        <input type="number" id="codigo" name="codigo" 
+                               value="<?= $user->codigo ?>"
+                               <?= ($orden == "Detalles" || $orden == "Modificar") ? "readonly" : "" ?>
+                               autofocus>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="nombre">Nombre</label></td>
+                    <td>
+                        <input type="text" id="nombre" name="nombre" 
+                               value="<?= $user->nombre ?>"
+                               <?= ($orden == "Detalles") ? "readonly" : "" ?>>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="stock">Stck</label></td>
+                    <td>
+                        <input type="number" id="stock" name="stock" 
+                               value="<?= $user->stock ?>" 
+                               <?= ($orden == "Detalles") ? "readonly" : "" ?>>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="stock_min">Stock minimo</label></td>
+                    <td>
+                        <input type="number" id="stock_min" name="stock_min" 
+                               value="<?= $user->stock_min ?>" 
+                               <?= ($orden == "Detalles") ? "readonly" : "" ?>>
+                    </td>
+                </tr>
+                 <tr>
+                    <td><label for="precio">Precio</label></td>
+                    <td>
+                        <input type="number" step="0.01" id="precio" name="precio" 
+                               value="<?= $user->precio ?>" 
+                               <?= ($orden == "Detalles") ? "readonly" : "" ?>>
+                    </td>
+                </tr>
+            </table>
+
+            <div style="margin-top: 20px;">
+                <input type="submit" name="orden" value="<?= $orden ?>">
+                <input type="submit" name="orden" value="Volver">
+            </div>
+        </form> 
+    </div>
+</div>
+
+</body>
+</html>
+<?php exit(); ?>
